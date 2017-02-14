@@ -1,0 +1,52 @@
+html {
+    font-family: @font-family-sans-serif;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+img {
+    border: none;
+}
+
+ul, li {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    /*color: @brand-primary;*/
+    /*.text-primary;*/
+    color: @link-color;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+        color: darken(@link-color, 10%);
+    }
+}
+
+select {
+    /*将默认的select选择框样式清除*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+textarea {
+    resize: none;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}

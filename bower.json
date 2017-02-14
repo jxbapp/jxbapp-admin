@@ -1,0 +1,22 @@
+{
+  "name": "jxbapp-admin",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "jxbapp.com"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "awesome-bootstrap-checkbox": "^0.3.7"
+  }
+}

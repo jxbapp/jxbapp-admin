@@ -1,0 +1,176 @@
+table.table, .grid table {
+    width: 100%;
+    border: 1px solid @table-inner-border;
+    tr {
+        &:nth-child(1n+2) {
+            width: 100%;
+            border: 1px solid @table-inner-border;
+        }
+    }
+    th {
+        // position: relative;
+        padding: @table-heading-padding;
+        background-color: @table-heading-bg;
+        font-weight: normal;
+        color: @table-header-color;
+        vertical-align: middle;
+        text-align: left;
+        user-select: none;
+        -webkit-user-select: none;
+        white-space: nowrap;
+        .caret {
+            margin: -2px 0 0 6px;
+        }
+    }
+    td {
+        // position: relative;
+        padding: @table-heading-padding;
+        // line-height: 14px;
+        .progress-span {
+            .flex-row;
+            background-color: transparent;
+            box-shadow: none;
+            max-width: 80%;
+            >div {
+                .flex(1);
+                margin-right: 6px;
+                margin-top: 7px;
+                padding: 0;
+                height: 3px;
+                background-color: #DDD;
+                vertical-align: middle;
+                overflow: hidden;
+                hr {
+                    margin: 0;
+                    border: none;
+                    height: 3px;
+                    background-color: #47A742;
+                }
+            }
+            span {
+                .flex(0);
+                -webkit-transform: scale(0.75);
+                transform: scale(0.75);
+                color: #777;
+            }
+        }
+    }
+}
+
+// 统计用 表格样式
+table.table-statistics {
+    width: 100%;
+    td, th {
+        // position: relative;
+        padding: 10px 5px 10px 0px;
+    }
+    td {
+        &.strong {
+            font-weight: 400;
+            font-size: @font-size-base + 8;
+        }
+        &.up::after {
+            position: absolute;
+            font-family: 'jxb-icon';
+            content: '\e91c';
+        }
+        &.down::after {
+            position: absolute;
+            font-family: 'jxb-icon';
+            content: '\e919';
+        }
+    }
+}
+
+.grid table, table.table, table.table-statistics {
+    th, td {
+        span.ellipsis-span {
+            position: relative;
+            display: inline-block;
+            // line-height: 18px;
+        }
+        img {
+            max-height: 60px;
+        }
+        &.sm {
+            max-width: 100px;
+        }
+        &.md {
+            max-width: 200px;
+        }
+        &.lg {
+            max-width: 300px;
+        }
+        &.min-sm {
+            min-width: 100px;
+        }
+        &.min-md {
+            min-width: 200px;
+        }
+        &.min-lg {
+            min-width: 300px;
+        }
+        &.sm-p {
+            width: 10%;
+        }
+        &.md-p {
+            width: 20%;
+        }
+        &.lg-p {
+            width: 30%;
+        }
+        &.gray {
+            color: #BBB;
+        }
+        &.green {
+            .text-success;
+        }
+        &.red {
+            .text-danger;
+        }
+        &.orange {
+            .text-warning;
+        }
+    }
+    .center {
+        .text-center;
+    }
+    .v-center {
+        vertical-align: middle;
+    }
+    .right {
+        .text-right;
+    }
+    .nowrap {
+        white-space: nowrap;
+    }
+    .nowrap-hidden {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .keep-all {
+        word-break: keep-all;
+    }
+    .break-all {
+        word-break: break-all;
+    }
+    .pre {
+        white-space: pre;
+    }
+    .pre-line {
+        white-space: pre-line;
+    }
+}
+
+table .checkbox {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+table tr {
+    &.selected th, &.selected td {
+        background-color: lighten(@brand-primary, 5%);
+        color: white !important;
+    }
+}
