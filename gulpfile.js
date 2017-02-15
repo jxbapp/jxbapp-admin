@@ -35,7 +35,7 @@ var dist = path.join('./', 'dist');
 
 let file = 'less/jxbapp-admin.less';
 
-gulp.task('less',  () =>
+gulp.task('release',  () =>
      gulp.src(file)
         .pipe(less())
         .on('error',handlerError)
