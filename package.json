@@ -1,6 +1,6 @@
 {
   "name": "jxbapp-admin",
-  "version": "0.0.3 alpha",
+  "version": "0.0.1 alpha 4",
   "description": "Bootstrap Admin Template",
   "main": "index.js",
   "scripts": {
