@@ -15,4 +15,5 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^2.0.1",
     "gulp-notify": "^3.0.0"
+  }
 }
