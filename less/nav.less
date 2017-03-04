@@ -39,7 +39,7 @@
 }
 
 .navigate {
-    position: fixed;
+    position: absolute;
     left: 0px;
     width: @sidebar-width;
     top: @header-navbar-height;
@@ -151,17 +151,11 @@
     min-width: 1024px;
     height: 100%;
     padding-top: @header-navbar-height;
-    padding-left: @sidebar-width;
     position: relative;
     transition: padding-left @transition-speed ease;
     -webkit-transition: padding-left @transition-speed ease;
     &.sidebar-folded {
-        padding-left: @sidebar-open-width ;
-        .navigate {
-            width: @sidebar-open-width;
-        }
         .nav-sidebar {
-            width: @sidebar-open-width;
             .sidebar-switch i {
                 transform: translate(0, -1px) rotate(90deg);
                 -webkit-transform: translate(0, -1px) rotate(90deg);
@@ -171,25 +165,8 @@
                 vertical-align: top;
             }
         }
-        .nav-navbar {
-            left: @sidebar-open-width;
-        }
     }
-    &.navbar-folded {
-        padding-left: @sidebar-width + @navbar-width;
-        .navigate {
-            width: @sidebar-width + @navbar-width;
-        }
-        .nav-navbar {
-            width: @navbar-width;
-        }
-    }
-    &.wrapper.sidebar-folded.navbar-folded {
-        padding-left: @sidebar-open-width + @navbar-width;
-        .navigate {
-            width: @sidebar-open-width + @navbar-width;
-        }
-    }
+    .wrapper-folded-variant(@sidebar-width, @sidebar-open-width, @navbar-width);
 }
 
 .wrapper:not(.sidebar-folded) .nav-sidebar {

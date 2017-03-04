@@ -233,6 +233,38 @@
     }
 }
 
+// 菜单和内容结构变体
+.wrapper-folded-variant(@sidebar-width, @sidebar-open-width, @navbar-width) {
+    padding-left: @sidebar-width;
+    &.sidebar-folded {
+        padding-left: @sidebar-open-width ;
+        .navigate {
+            width: @sidebar-open-width;
+        }
+        .nav-sidebar {
+            width: @sidebar-open-width;
+        }
+        .nav-navbar {
+            left: @sidebar-open-width;
+        }
+    }
+    &.navbar-folded {
+        padding-left: @sidebar-width + @navbar-width;
+        .navigate {
+            width: @sidebar-width + @navbar-width;
+        }
+        .nav-navbar {
+            width: @navbar-width;
+        }
+    }
+    &.wrapper.sidebar-folded.navbar-folded {
+        padding-left: @sidebar-open-width + @navbar-width;
+        .navigate {
+            width: @sidebar-open-width + @navbar-width;
+        }
+    }
+}
+
 .nav-sidebar-variant(@color, @bg-color, @font-color, @font-color-active) {
     background-color: @bg-color;
     .sidebar-switch {
@@ -299,7 +331,6 @@
 
 
 // pagination 
-
 .pagination-variant ( @active-bg) {
     > .active > a,
     > .active > span {
