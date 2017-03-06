@@ -222,9 +222,14 @@
         background-color: darken(@color, 5%);
         color: @font-color;
     }
-    .header-navbar > li{
+    .header-navbar > li {
         color : @font-color;
         border-color: darken(@color, 5%);
+
+        & > a {
+            background-color: @color;
+        }
+
         &.open > a ,
         &.active > a ,
         &:hover > a  { 
@@ -265,17 +270,18 @@
     }
 }
 
-.nav-sidebar-variant(@color, @bg-color, @font-color, @font-color-active) {
+.nav-sidebar-variant(@color, @bg-color, @font-color, @font-color-hover, @font-color-active) {
     background-color: @bg-color;
     .sidebar-switch {
         color: @font-color;
         background-color: lighten(@bg-color , 10%);
     }
-    .group-title, ul > li {
+    .group-title, 
+    ul > li {
         color: @font-color;
         &:hover {
             background-color: lighten(@bg-color , 10%);
-            color: @font-color-active;
+            color: @font-color-hover;
         }   
         &.active {
             background-color: @color;
@@ -284,9 +290,9 @@
         .group-title {
             background-color: @bg-color;
         }
-        // span {
-        //     color: @font-color;
-        // }
+        span {
+            color: @font-color-active;
+        }
     }
 }
 
