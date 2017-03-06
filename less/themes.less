@@ -360,11 +360,11 @@ table.table,
 .nav-sidebar {
 
     .mixin(@style) when (@style = 'dark') {
-        .nav-sidebar-variant(@brand-primary, @sidebar-dark-bg , @sidebar-dark-text ,@sidebar-dark-active-text);
+        .nav-sidebar-variant(@brand-primary, @sidebar-dark-bg , @sidebar-dark-text , @sidebar-dark-hover-text , @sidebar-dark-active-text);
     }
 
     .mixin(@style) when (@style = 'light') {
-        .nav-sidebar-variant(@brand-primary, @sidebar-light-bg , @sidebar-light-text ,@sidebar-light-active-text);
+        .nav-sidebar-variant(@brand-primary, @sidebar-light-bg , @sidebar-light-text , @sidebar-light-hover-text , @sidebar-light-active-text);
     }
 
     .mixin(@sidebar-style);
