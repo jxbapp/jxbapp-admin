@@ -1,11 +1,8 @@
 {
   "name": "jxbapp-admin",
-  "version": "0.0.1",
-  "description": "Bootstrap Admin Template",
+  "version": "0.0.2",
+  "description": "based bootstrap admin template",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "jxbapp.com",
   "license": "MIT",
   "dependencies": {
