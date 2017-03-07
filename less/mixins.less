@@ -226,15 +226,24 @@
         color : @font-color;
         border-color: darken(@color, 5%);
 
-        & > a {
-            background-color: @color;
-        }
+        // & > a {
+        //     background-color: @color;
+        // }
 
         &.open > a ,
         &.active > a ,
         &:hover > a  { 
-            background-color: darken(@color, 2%);
+            // background-color: darken(@color, 2%);
         }
+    }
+
+    &.fog::after {
+        background-color: rgba(red(@color), green(@color), blue(@color), 0.8);
+        -webkit-filter: blur(20px);
+        -moz-filter: blur(20px);
+        -ms-filter: blur(20px);
+        -o-filter: blur(20px);
+        filter: blur(20px);
     }
 }
 
