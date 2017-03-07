@@ -1,3 +1,9 @@
+[class^="btn-checked-"], [class*=" btn-checked-"] {
+    border: 0px;
+    margin-right: @content-gutter-width * 0.5;
+    background-color: @btn-checked-bg;
+}
+
 // btn 类 扩展
 .btn-checked-primary {
     .btn-checked-variant(@btn-default-color, @btn-default-bg, @btn-default-border, #fff, @brand-primary, darken( @brand-primary, 5%));
@@ -17,3 +23,13 @@
 // &[disabled] {
 //     .button-variant(@gray-light, @gray-lighter, darken(@gray-lighter , 10%));
 // }
+
+.btn-mini, .btn-group-mini > .btn {
+    padding: 1px 2px;
+    font-size: 12px;
+    line-height: 1;
+    border-radius: 1px;
+    [class^="btn-checked-"], [class*=" btn-checked-"] {
+        margin-right: @content-gutter-width * 0.3;
+    }
+}
