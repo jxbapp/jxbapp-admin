@@ -1,5 +1,7 @@
-// @import "../bower_components/bootstrap/less/mixins.less";
+@import "../bower_components/bootstrap/less/variables.less";
+@import "../bower_components/bootstrap/less/mixins.less";
 
+@import "variables.less";
 @import "mixins.less";
 
 a {
@@ -227,6 +229,7 @@ a {
 .panel-warning > .panel-heading   { .panel-heading-styles(@panel-warning-heading-bg); }
 .panel-danger > .panel-heading    { .panel-heading-styles(@panel-danger-heading-bg); }
 
+
 table.table,
 .grid table {
     th {
@@ -244,7 +247,6 @@ table.table,
 .grid table {
   .box-shadow(0 1px 2px rgba(0,0,0,.05));
 }
-
 
 //
 // Wells
@@ -267,20 +269,24 @@ table.table,
 .btn-warning { .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border); }
 .btn-danger { .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border); }
 
+[class^="btn-checked-"], [class*=" btn-checked-"] { 
+  .box-shadow(none);
+}
+
 .btn-checked-primary {
-    .btn-checked-variant(@btn-default-color, @btn-default-bg, @btn-default-border, #fff, @brand-primary, darken( @brand-primary, 5%));
+    .btn-checked-variant(@btn-default-color, @btn-checked-bg, @btn-default-border, #fff, @brand-primary, darken( @brand-primary, 5%));
 }
 .btn-checked-success {
-    .btn-checked-variant(@btn-default-color, @btn-default-bg, @btn-default-border, #fff, @brand-success, darken( @brand-success, 5%));
+    .btn-checked-variant(@btn-default-color, @btn-checked-bg, @btn-default-border, #fff, @brand-success, darken( @brand-success, 5%));
 }
 .btn-checked-danger {
-    .btn-checked-variant(@btn-default-color, @btn-default-bg, @btn-default-border, #fff, @brand-danger, darken( @brand-danger, 5%));
+    .btn-checked-variant(@btn-default-color, @btn-checked-bg, @btn-default-border, #fff, @brand-danger, darken( @brand-danger, 5%));
 }
 .btn-checked-warning {
-    .btn-checked-variant(@btn-default-color, @btn-default-bg, @btn-default-border, #fff, @brand-warning, darken( @brand-warning, 5%));
+    .btn-checked-variant(@btn-default-color, @btn-checked-bg, @btn-default-border, #fff, @brand-warning, darken( @brand-warning, 5%));
 }
 .btn-checked-info {
-    .btn-checked-variant(@btn-default-color, @btn-default-bg, @btn-default-border, #fff, @brand-info, darken( @brand-info, 5%));
+    .btn-checked-variant(@btn-default-color, @btn-checked-bg, @btn-default-border, #fff, @brand-info, darken( @brand-info, 5%));
 }
 
 // checkbox & radio

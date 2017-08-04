@@ -30,8 +30,8 @@ let handlerError = function () {
     this.emit(); //提交
 };
 
-var src = path.join('./', 'src');
-var dist = path.join('./', 'dist');
+let src = path.join('./', 'src');
+let dist = path.join('./', 'dist');
 
 let file = 'less/jxbapp-admin.less';
 
