@@ -2,7 +2,7 @@
   "name": "jxbapp-admin",
   "version": "0.1.0",
   "description": "based bootstrap admin template",
-  "main": "index.js",
+  "main": "dist/jxbapp-admin.css",
   "author": "jxbapp.com",
   "license": "MIT",
   "dependencies": {
