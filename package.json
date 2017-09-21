@@ -6,6 +6,10 @@
   "author": "jxbapp.com",
   "license": "MIT",
   "dependencies": {
+    "awesome-bootstrap-checkbox": "^0.3.7",
+    "bootstrap": "^3.3.7"
+  },
+  "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.0.2",
     "gulp-less": "^3.3.0",
