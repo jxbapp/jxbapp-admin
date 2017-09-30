@@ -24,10 +24,17 @@
 	}
 }
 
-.open .dropdown-menu {
+.dropdown-menu {
     border-width: 0px;
     margin-top: -5px;
     padding: 0;
+}
+
+ul.dropdown-menu {
+    padding: 5px 0;
+}
+
+.open .dropdown-menu {
     animation: dropdown-menu-open .4s 1;
 }
 
@@ -39,7 +46,7 @@
         content: "";
         position: absolute;
         top: -8px;
-        left: 40px;
+        left: 30px;
         border-bottom: 10px solid #FAFAFA;
         border-left: 12px solid transparent;
         border-right: 12px solid transparent;
@@ -48,7 +55,5 @@
 
 .dropdown-menu.dropdown-menu-right::before {
     left: inherit;
-    right: 40px;
+    right: 30px;
 }
-
-
