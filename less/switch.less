@@ -1,0 +1,71 @@
+/* The switch - the box around the slider */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    .switch-size(@switch-slider-base, @switch-slider-padding);
+
+    &.switch-sm {
+        .switch-size(@switch-slider-sm, @switch-slider-sm-padding);
+    }
+    &.switch-lg {
+        .switch-size(@switch-slider-lg, @switch-slider-lg-padding);
+    }
+}
+
+/* Hide default HTML checkbox */
+
+.switch input {
+    display: none;
+}
+
+/* The slider */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.switch-variant(@brand-primary);
+
+.switch-size (@switch-slider-size, @switch-padding) {
+    @switch-width: @switch-slider-size * 2 + @switch-padding * 2;
+    @switch-height: @switch-slider-size + @switch-padding * 2;
+    width: @switch-width;
+    height: @switch-height;
+    .slider {
+        &:before {
+            height: @switch-slider-size;
+            width: @switch-slider-size;
+            left: @switch-padding;
+            bottom: @switch-padding;
+        }
+        &.round {
+            border-radius: @switch-height;
+        }
+    }
+    input:checked + .slider:before {
+        -webkit-transform: translateX(@switch-slider-size);
+        -ms-transform: translateX(@switch-slider-size);
+        transform: translateX(@switch-slider-size);
+    }
+}

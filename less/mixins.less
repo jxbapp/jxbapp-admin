@@ -226,9 +226,10 @@
         color : @font-color;
         border-color: darken(@color, 5%);
 
-        // & > a {
-        //     background-color: @color;
-        // }
+        &.open,
+        &.open:hover {
+            background-color: darken(@brand-primary, 3%);
+        }
 
         &.open > a ,
         &.active > a ,
@@ -358,5 +359,16 @@
             background-color: @active-bg;
             border-color: @active-bg;
         }
+    }
+}
+
+// switch 
+.switch-variant(@color) {
+    input:checked + .slider {
+        background-color: @color;
+    }
+    
+    input:focus + .slider {
+        box-shadow: 0 0 1px @color;
     }
 }
